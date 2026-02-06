@@ -1,0 +1,19 @@
+#sample-para{
+    font-size: 50px;
+    color: blue;
+    font-weight: 900;
+    text-align: justify;
+    line-height: 50px;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+#image-container{
+    height: 75vh;
+    width: 75vw;
+    background-image: url(https://thumbs.dreamstime.com/b/web-development-coding-programming-internet-technology-business-concept-web-development-coding-programming-internet-technology-121903546.jpg);
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+    background-size: cover;
+    background-attachment: scroll;
+
+}
