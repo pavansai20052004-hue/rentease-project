@@ -1,0 +1,75 @@
+.checkout-page {
+  display: grid;
+  gap: 26px;
+}
+
+.checkout-header h1 {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(32px, 5vw, 52px);
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 24px;
+  align-items: start;
+}
+
+.checkout-card {
+  display: grid;
+  gap: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.checkout-card h2 {
+  color: var(--ink);
+}
+
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.date-grid label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.checkout-summary {
+  background: #fffdf8;
+}
+
+.checkout-line,
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--muted);
+}
+
+.checkout-line strong,
+.checkout-total strong {
+  color: var(--ink);
+}
+
+.checkout-total {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+@media (max-width: 860px) {
+  .checkout-layout,
+  .date-grid {
+    grid-template-columns: 1fr;
+  }
+}

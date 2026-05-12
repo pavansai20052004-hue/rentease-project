@@ -1,0 +1,28 @@
+.payment {
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-box {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.payment-box h2 {
+  margin-bottom: 15px;
+}
+
+.payment-box button {
+  padding: 12px 30px;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
