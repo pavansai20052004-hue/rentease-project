@@ -1,120 +1,38 @@
-README.MD
-# Rentease Project
+# RentEase Project
 
-This is a rental web application.
+Industry-style furniture and appliance rental platform with React frontend, Express/MongoDB backend, protected auth, cart, checkout, order dashboard, and Razorpay payment verification.
 
-Technologies:
-- HTML
-- CSS
-- JavaScript
-- NODE.JS
-- REACT
-- MANGODB
-- TAILWIND
-- # RentEase Project
-Furniture & Appliance Rental Web Platform
+## Live Demo
 
-------------------------------------------------------------
+Deployment-ready configs are included for:
 
-## Project Overview
+- Vercel frontend: `Rentease-Project/rentease-frontend`
+- Render backend: `render.yaml`
+- Railway backend: `Rentease-Project/rentease-backend/railway.toml`
 
-RentEase is a web-based rental platform designed to provide users with an easy way to rent furniture and home appliances. 
-The platform simplifies the rental process by allowing users to browse products, view details, and manage rental selections through a clean and responsive web interface.
+Live production URLs should be added to [Rentease-Project/LIVE_DEMO.md](Rentease-Project/LIVE_DEMO.md) after connecting Vercel and Render/Railway accounts.
 
-This project demonstrates frontend web development concepts and structured project organization.
+## Local Start
 
-------------------------------------------------------------
+Backend:
 
-## Tech Stack
+```powershell
+cd Rentease-Project\rentease-backend
+npm install
+$env:PORT="5001"
+$env:CLIENT_URL="http://localhost:3000"
+npm start
+```
 
 Frontend:
-- HTML
-- CSS
-- JavaScript
 
-Tools:
-- VS Code
-- Git & GitHub
+```powershell
+cd Rentease-Project\rentease-frontend
+npm install
+$env:REACT_APP_API_URL="http://localhost:5001/api"
+npm start
+```
 
-Optional (if backend/database used):
-- Node.js
-- Express.js
-- MongoDB
+## Deployment
 
-------------------------------------------------------------
-
-## Project Structure
-
-rentease-project/
-│
-├── RentEase-Project/            Main project files
-├── css/                         Styling files
-├── sample resume web page_files/
-├── type conversion js/
-├── README.md
-
-------------------------------------------------------------
-
-## Features
-
-- Clean and responsive user interface
-- Product listing section
-- Furniture and appliance categories
-- Basic navigation system
-- Organized folder structure
-- Static website deployment ready
-
-------------------------------------------------------------
-
-## How It Works
-
-1. User opens the website.
-2. Products are displayed in categorized format.
-3. User can browse available furniture and appliances.
-4. Frontend handles UI interactions.
-
-------------------------------------------------------------
-
-## Installation & Setup
-
-1. Clone the repository:
-
-git clone https://github.com/your-username/rentease-project.git
-cd rentease-project
-
-2. Open the project folder.
-
-3. Open index.html file in browser
-   OR use Live Server in VS Code.
-
-------------------------------------------------------------
-
-## Learning Outcomes
-
-- Built a structured web application
-- Practiced HTML page design
-- Implemented CSS styling and layout design
-- Used JavaScript for basic interactivity
-- Understood project folder organization
-- Hosted project using GitHub
-
-------------------------------------------------------------
-
-## Future Improvements
-
-- Add backend with Node.js and Express
-- Connect to MongoDB database
-- Add user login and registration
-- Add rental cart system
-- Implement payment gateway
-- Improve UI with animations
-
-------------------------------------------------------------
-
-## Author
-
-Pavan Sai
-Full Stack Web Developer | MERN Stack Enthusiast
-  
-
-Author: GJV PAVAN SAI
+See [Rentease-Project/DEPLOYMENT.md](Rentease-Project/DEPLOYMENT.md) for Vercel, Render, and Railway setup.

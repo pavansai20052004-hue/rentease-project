@@ -60,3 +60,44 @@ REACT_APP_RAZORPAY_KEY_ID=rzp_live_or_test_key
 - Database: MongoDB Atlas.
 - After deployment, update `CLIENT_URL` on the backend to the exact frontend domain and update `REACT_APP_API_URL` on the frontend to the backend `/api` URL.
 - Keep `RAZORPAY_KEY_SECRET` only on the backend. The frontend should only receive `REACT_APP_RAZORPAY_KEY_ID`; payment success is verified by `/api/payments/verify` before an order is saved.
+
+## Vercel frontend
+
+Import this GitHub repo into Vercel and set:
+
+```bash
+Root Directory: Rentease-Project/rentease-frontend
+Framework Preset: Create React App
+Build Command: npm run build
+Output Directory: build
+```
+
+The frontend includes `vercel.json` for production SPA rewrites.
+
+## Render backend
+
+Render can use the root `render.yaml` Blueprint in this repo.
+
+Set these secret values in the Render dashboard:
+
+```bash
+CLIENT_URL=https://your-vercel-domain
+MONGO_URI=mongodb+srv://...
+JWT_SECRET=your-long-random-secret
+RAZORPAY_KEY_ID=rzp_test_or_live_key_id
+RAZORPAY_KEY_SECRET=your_razorpay_secret
+```
+
+## Railway backend
+
+Create a Railway service from the GitHub repo and set the service root directory to:
+
+```bash
+Rentease-Project/rentease-backend
+```
+
+Railway will read `railway.toml` from that backend folder. Add the same backend environment variables listed above.
+
+## Add links
+
+After the first successful deployments, paste the production URLs into `LIVE_DEMO.md` and your GitHub README.
