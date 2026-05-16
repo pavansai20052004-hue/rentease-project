@@ -1,0 +1,143 @@
+.product-card {
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 228px 1fr;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.product-image-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.04);
+}
+
+.product-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  max-width: calc(100% - 28px);
+  padding: 8px 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(19, 26, 36, 0.78);
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  backdrop-filter: blur(12px);
+}
+
+.product-card-body {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.product-card h3 {
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.product-card p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.product-signals {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.product-signals span {
+  padding: 7px 9px;
+  border: 1px solid rgba(15, 107, 95, 0.16);
+  border-radius: 999px;
+  background: #f3f8f6;
+  color: #25534d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.price-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.price-row div {
+  padding: 12px;
+  background: #faf7f1;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+.price-row span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.price-row strong {
+  color: var(--ink);
+}
+
+.product-card-actions {
+  display: grid;
+  grid-template-columns: minmax(92px, 0.7fr) minmax(140px, 1fr);
+  gap: 10px;
+}
+
+.product-card-actions .ghost-link {
+  width: 100%;
+}
+
+.product-card button {
+  width: 100%;
+  background: var(--ink);
+  color: white;
+}
+
+.product-card button:hover {
+  background: var(--accent);
+}
+
+@media (max-width: 420px) {
+  .product-card-actions {
+    grid-template-columns: 1fr;
+  }
+}

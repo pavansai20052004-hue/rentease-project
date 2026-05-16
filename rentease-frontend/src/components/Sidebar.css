@@ -1,0 +1,28 @@
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 24px;
+  background: var(--ink);
+  color: white;
+}
+
+.sidebar h2 {
+  margin-bottom: 18px;
+}
+
+.sidebar a {
+  padding: 12px;
+  color: rgba(255, 255, 255, 0.76);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
