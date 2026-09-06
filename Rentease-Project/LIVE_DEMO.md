@@ -12,10 +12,10 @@ Use these links in your resume, portfolio, and LinkedIn once the deployments are
 
 | Service | Platform | URL |
 | --- | --- | --- |
-| Frontend app | Vercel | Add the Vercel production URL here |
-| Backend API | Render | Add the Render API URL here |
+| Frontend app | Vercel | [Open RentEase](https://rentease-frontend-sooty.vercel.app/) |
+| Backend API | Render | https://rentease-project-brr3.onrender.com/api |
 | Backend API alternate | Railway | Add the Railway API URL here |
-| Health check | Render/Railway | `https://your-backend-domain/api/health` |
+| Health check | Render/Railway | `https://rentease-project-brr3.onrender.com/api/health` |
 
 ## Recruiter Demo Checklist
 

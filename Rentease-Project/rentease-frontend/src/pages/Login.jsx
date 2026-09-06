@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { loginUser } from "../api/authApi";
+import { loginUser, getAuthErrorMessage } from "../api/authApi";
 import { useAuth } from "../context/AuthContext";
 import "./Auth.css";
 
@@ -25,7 +25,7 @@ const Login = () => {
       login({ user: data.user, token: data.token });
       navigate("/dashboard");
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed. Please try again.");
+      setError(getAuthErrorMessage(err));
     } finally {
       setLoading(false);
     }
@@ -41,7 +41,7 @@ const Login = () => {
         </div>
 
         <form className="auth-form" onSubmit={handleSubmit}>
-          {error && <div className="form-error">{error}</div>}
+          {error && <div role="alert" className="form-error">{error}</div>}
 
           <label>
             Email

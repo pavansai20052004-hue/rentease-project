@@ -4,6 +4,8 @@ Industry-style furniture and appliance rental platform with React frontend, Expr
 
 ## Live Demo
 
+[Open RentEase](https://rentease-frontend-sooty.vercel.app/)
+
 Deployment-ready configs are included for:
 
 - Vercel frontend: `Rentease-Project/rentease-frontend`
