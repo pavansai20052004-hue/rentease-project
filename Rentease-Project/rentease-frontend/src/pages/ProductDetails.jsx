@@ -30,8 +30,15 @@ export default function ProductDetails() {
         <img src={product.image} alt={product.name} className="product-detail-image" />
 
         <div className="product-detail-content">
-          <span className="section-eyebrow">{product.category}</span>
-          <h1>{product.name}</h1>
+          <div className="detail-title-row">
+            <span className="section-eyebrow">{product.category}</span>
+            <h1>{product.name}</h1>
+            <div className="detail-badges">
+              <span>{product.badge}</span>
+              <span>{product.room}</span>
+              <span>{product.rating} rating</span>
+            </div>
+          </div>
           <p>{product.description}</p>
 
           <div className="detail-price-grid">
@@ -42,6 +49,14 @@ export default function ProductDetails() {
             <div>
               <span>Refundable deposit</span>
               <strong>{formatPrice(product.deposit)}</strong>
+            </div>
+            <div>
+              <span>Delivery</span>
+              <strong>{product.delivery}</strong>
+            </div>
+            <div>
+              <span>Rental tenure</span>
+              <strong>{product.tenure}</strong>
             </div>
           </div>
 

@@ -11,6 +11,7 @@ const ProductCard = ({ product }) => {
     <article className="product-card">
       <Link to={`/products/${product.id}`} className="product-image-link">
         <img src={product.image} alt={product.name} className="product-image" />
+        <span className="product-badge">{product.badge}</span>
       </Link>
 
       <div className="product-card-body">
@@ -20,6 +21,12 @@ const ProductCard = ({ product }) => {
         </div>
         <h3>{product.name}</h3>
         <p>{product.description}</p>
+
+        <div className="product-signals">
+          <span>{product.room}</span>
+          <span>{product.delivery}</span>
+          <span>{product.tenure}</span>
+        </div>
 
         <div className="price-row">
           <div>
@@ -32,9 +39,14 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
 
-        <button type="button" onClick={() => addToCart(product)}>
-          Add to cart
-        </button>
+        <div className="product-card-actions">
+          <Link to={`/products/${product.id}`} className="ghost-link">
+            Details
+          </Link>
+          <button type="button" onClick={() => addToCart(product)}>
+            Add to cart
+          </button>
+        </div>
       </div>
     </article>
   );

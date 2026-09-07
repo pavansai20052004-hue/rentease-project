@@ -1,17 +1,19 @@
 :root {
-  --background: #f6f3ed;
+  --background: #f7f8f4;
   --surface: #ffffff;
-  --ink: #10201d;
-  --muted: #66736f;
-  --accent: #125f54;
-  --accent-strong: #0c473e;
-  --warm: #f5a863;
-  --line: #e6ded2;
-  --radius: 18px;
-  --radius-sm: 10px;
+  --ink: #131a24;
+  --muted: #66716d;
+  --accent: #0f6b5f;
+  --accent-strong: #0a5148;
+  --accent-blue: #1b3d8f;
+  --accent-coral: #e85d4f;
+  --warm: #f2b84b;
+  --line: #dfe4dd;
+  --radius: 8px;
+  --radius-sm: 8px;
   --header-height: 76px;
-  --shadow: 0 24px 60px rgba(16, 32, 29, 0.14);
-  --shadow-soft: 0 14px 34px rgba(16, 32, 29, 0.08);
+  --shadow: 0 24px 60px rgba(19, 26, 36, 0.14);
+  --shadow-soft: 0 14px 34px rgba(19, 26, 36, 0.08);
 }
 
 * {
@@ -22,11 +24,14 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 18px);
 }
 
 body {
   min-width: 320px;
-  background: var(--background);
+  background:
+    linear-gradient(180deg, rgba(15, 107, 95, 0.04), transparent 340px),
+    var(--background);
   color: var(--ink);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   letter-spacing: 0;
@@ -42,7 +47,8 @@ a {
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 

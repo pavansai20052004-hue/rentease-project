@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./context/AuthContext";
@@ -16,12 +17,28 @@ import Products from "./pages/Products";
 import Register from "./pages/Register";
 import Success from "./pages/Success";
 
+function HashScroller() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) {
+      return;
+    }
+
+    const target = document.querySelector(location.hash);
+    target?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <AuthProvider>
       <CartProvider>
         <OrderProvider>
           <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+            <HashScroller />
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
